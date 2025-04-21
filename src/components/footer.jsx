@@ -11,7 +11,7 @@ export default function Footer() {
           
           <div className="grid grid-cols-3 md:grid-cols-3 text-center mt-6">
             <div>
-                <h3 className="uppercase font-semibold text-xs mb-4">Company</h3>
+                <h3 className="uppercase font-semibold text-xs mb-4 text-center">Company</h3>
                 <ul className="space-y-2">
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">The Team</a></li>
