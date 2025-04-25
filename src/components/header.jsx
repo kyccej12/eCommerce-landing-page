@@ -48,10 +48,11 @@ export default function Navbar() {
       </div>
       
       <div className="w-1/3 text-center">
-            {/* Center Logo */}
-          <div className="font-sans mx-auto items-center text-4xl font-bold tracking-widest uppercase">
-            MONDE
-          </div>
+        {/* Center Logo */}
+        <div className="flex items-center justify-center space-x-2 p-2">
+          <img src="./icons/monde-logo.png" alt="icon" className="w-10 h-10 mr-2" />
+          <h2 className="font-sans text-4xl font-bold pl-2">MONDE</h2>
+        </div>
       </div>
      
       <div className="w-1/3">
@@ -67,13 +68,12 @@ export default function Navbar() {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
         </div>
-      
 
-        {/* Mobile Search Icon */}
-        <button className="md:hidden" onClick={() => setShowMobileSearch(true)}>
-          <Search size={22} />
-        </button>
-      </div>
+          {/* Mobile Search Icon */}
+          <button className="md:hidden" onClick={() => setShowMobileSearch(true)}>
+            <Search size={22} />
+          </button>
+        </div>
       </div>
 
 
