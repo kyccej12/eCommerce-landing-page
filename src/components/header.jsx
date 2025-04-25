@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { Menu, X, Search } from "lucide-react";
 
 export default function Navbar() {
@@ -6,6 +7,14 @@ export default function Navbar() {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const suggestions = ["Tennis Core", "Zendaya", "Streetwear", "Activewear"];
+
+  const menuItems = [
+      { label: "Home", path: "/home" },
+      { label: "Need Help?", path: "/help" },
+      { label: "Learn Stuff", path: "/learn" },
+      { label: "Read Stuff", path: "/read" },
+      { label: "About", path: "/about" },
+    ];
 
   return (
     
@@ -18,42 +27,64 @@ export default function Navbar() {
       </div>
 
       {/* Left Nav (desktop only) */}
-      <div className="hidden md:flex gap-8 absolute left-4 top-1/2 -translate-y-1/2">
-        <a href="#" className="text-sm font-medium font-sans font-stretch-expanded uppercase hover:text-gray-600">Home</a>
-        <a href="#" className="text-sm font-medium font-sans font-stretch-expanded uppercase hover:text-gray-600">Stories</a>
-        <a href="#" className="text-sm font-medium font-sans font-stretch-expanded uppercase hover:text-gray-600">Style</a>
-      </div>
 
-      {/* Center Logo */}
-      <div className="font-sans mx-auto text-4xl font-bold tracking-widest uppercase">
-        MONDE
-      </div>
 
-      {/* Right Side */}
-      <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
-        {/* Desktop Search */}
-        <div className="hidden md:block">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="border px-3 py-1 rounded-md text-sm"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
+      <div className="w-1/3">
+        <ul className="hidden md:flex space-x-8 text-sm">
+            {menuItems.map(({ label, path }) => (
+              <li key={path} className="relative">
+                <NavLink
+                  to={path}
+                  className={({ isActive }) =>
+                    `relative font-medium px-1 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-red-300 after:transition-opacity after:duration-300
+                    ${isActive ? "font-semibold after:opacity-100" : "after:opacity-0 hover:after:opacity-100"}`
+                  }
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
+        </ul>
+      </div>
+      
+      <div className="w-1/3 text-center">
+            {/* Center Logo */}
+          <div className="font-sans mx-auto items-center text-4xl font-bold tracking-widest uppercase">
+            MONDE
+          </div>
+      </div>
+     
+      <div className="w-1/3">
+        {/* Right Side */}
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
+          {/* Desktop Search */}
+          <div className="hidden md:block">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="border px-3 py-1 rounded-md text-sm"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
         </div>
+      
 
         {/* Mobile Search Icon */}
         <button className="md:hidden" onClick={() => setShowMobileSearch(true)}>
           <Search size={22} />
         </button>
       </div>
+      </div>
+
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md px-4 py-3 z-10 transition-opacity duration-300 ease-in-out animate-fade-in">
           <a href="#" className="block py-2 text-sm">Home</a>
-          <a href="#" className="block py-2 text-sm">Stories</a>
-          <a href="#" className="block py-2 text-sm">Style</a>
+          <a href="#" className="block py-2 text-sm">Need Help?</a>
+          <a href="#" className="block py-2 text-sm">Learn Stuff</a>
+          <a href="#" className="block py-2 text-sm">Read Stuff</a>
+          <a href="#" className="block py-2 text-sm">About</a>
         </div>
       )}
 
