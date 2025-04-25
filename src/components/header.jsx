@@ -10,15 +10,15 @@ export default function Navbar() {
 
   const menuItems = [
       { label: "Home", path: "/home" },
-      { label: "Need Help?", path: "/help" },
-      { label: "Learn Stuff", path: "/learn" },
-      { label: "Read Stuff", path: "/read" },
+      { label: "Brands To Know", path: "/brands" },
+      { label: "Just Landed", path: "/landed" },
+      { label: "Stores To Shop", path: "/stores" },
       { label: "About", path: "/about" },
     ];
 
   return (
     
-    <nav className="w-full border-b px-4 py-3 flex items-center justify-between relative bg-white z-20">
+    <nav className="w-full px-4 py-3 flex items-center justify-between fixed bg-white z-20">
       {/* Mobile Menu Button */}
       <div className="md:hidden flex items-center">
         <button onClick={() => setIsOpen(!isOpen)}>
@@ -81,9 +81,9 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md px-4 py-3 z-10 transition-opacity duration-300 ease-in-out animate-fade-in">
           <a href="#" className="block py-2 text-sm">Home</a>
-          <a href="#" className="block py-2 text-sm">Need Help?</a>
-          <a href="#" className="block py-2 text-sm">Learn Stuff</a>
-          <a href="#" className="block py-2 text-sm">Read Stuff</a>
+          <a href="#" className="block py-2 text-sm">Brands To Know</a>
+          <a href="#" className="block py-2 text-sm">Just Landed</a>
+          <a href="#" className="block py-2 text-sm">Stores To Shop</a>
           <a href="#" className="block py-2 text-sm">About</a>
         </div>
       )}

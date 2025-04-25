@@ -1,7 +1,7 @@
 export default function Hero() {
     return (
         <div
-          className="relative bg-cover bg-center md:bg-top h-[600px]"
+          className="relative bg-cover bg-center md:bg-top h-[750px]"
           style={{
             backgroundImage:
               "url('src/img/bg.jpg')",
