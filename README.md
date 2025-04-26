@@ -1,12 +1,51 @@
 # React + Vite + Tailwindcss
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce landing page built with React, Vite, and TailwindCSS.
+It features a sleek design, fast performance, and mobile-first responsiveness, perfect for showcasing products and driving user engagement.
+Includes hero section, product highlights, feature sections, contact us, and a call-to-action to maximize conversions.
 
-Currently, two official plugins are available:
+## Mobile View Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![App Screenshot](./assets/screenshots/ss-1.jpg)
+![App Screenshot](./assets/screenshots/ss-2.jpg)
 
-## Expanding the ESLint configuration
+## Desktop View Screenshots
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![App Screenshot](./assets/screenshots/ss-3.jpg)
+
+## Directory Structure
+
+assets
+   └──screenshots  
+public
+   |───brands
+   |───category
+   |───edition
+   |───edits
+   |───icons
+   |───products
+   └──stores
+src       
+|  └──assets
+|  └──components
+|        │──brands.jsx
+|        │──edition.jsx
+|        │──footer.jsx
+|        │──footer.jsx
+|        │──header.jsx
+|        │──hero.jsx
+|        │──justLandedSection.jsx
+|        │──mondeEdits.jsx
+|        │──newsLetterSection.jsx
+|        │──productCard.jsx
+|        │──shopNav.jsx
+|        └──stores.jsx
+|──img
+|──App.css
+|──App.jsx
+|──index.css
+└──main.jsx
+index.html
+postcss.config.js
+tailwind.config.js
+vite.config.js
