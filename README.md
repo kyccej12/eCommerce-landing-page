@@ -15,37 +15,40 @@ Includes hero section, product highlights, feature sections, contact us, and a c
 
 ## Directory Structure
 
+```plaintext
 assets
-   └──screenshots  
+└── screenshots
 public
-   |───brands
-   |───category
-   |───edition
-   |───edits
-   |───icons
-   |───products
-   └──stores
-src       
-|  └──assets
-|  └──components
-|        │──brands.jsx
-|        │──edition.jsx
-|        │──footer.jsx
-|        │──footer.jsx
-|        │──header.jsx
-|        │──hero.jsx
-|        │──justLandedSection.jsx
-|        │──mondeEdits.jsx
-|        │──newsLetterSection.jsx
-|        │──productCard.jsx
-|        │──shopNav.jsx
-|        └──stores.jsx
-|──img
-|──App.css
-|──App.jsx
-|──index.css
-└──main.jsx
-index.html
+├── brands
+├── category
+├── edition
+├── edits
+├── icons
+├── products
+├── stores
+src
+├── assets
+├── components
+│   ├── brands.jsx
+│   ├── edition.jsx
+│   ├── footer.jsx
+│   ├── header.jsx
+│   ├── hero.jsx
+│   ├── justLandedSection.jsx
+│   ├── mondeEdits.jsx
+│   ├── newsLetterSection.jsx
+│   ├── productCard.jsx
+│   ├── shopNav.jsx
+│   └── stores.jsx
+├── img
+├── App.css
+├── App.jsx
+├── index.css
+├── index.jsx
+└── main.jsx
 postcss.config.js
 tailwind.config.js
 vite.config.js
+index.html
+```
+
